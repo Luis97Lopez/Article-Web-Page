@@ -40,11 +40,14 @@
                         {
                             echo "<img src='../media/perfil1.jpg'";
                         }
-                        echo "<a href='modificar_imagen_pp.php?idU=".$usuario['idUsuario']."'>
-                            <button type='button' class='btn btn-primary' style='margin-left:15px; margin-top:15px;'>
-                                Modificar Imagen
-                            </button>
-                            </a>";
+                        if(!empty($_SESSION) && $_SESSION['idUsuario'] == $usuario['idUsuario'])
+                        {
+                            echo "<a href='modificar_imagen_pp.php?idU=".$usuario['idUsuario']."'>
+                                <button type='button' class='btn btn-primary' style='margin-left:15px; margin-top:15px;'>
+                                    Modificar Imagen
+                                </button>
+                                </a>";
+                        }
                     ?>
                 </div>
                 <div class="datos">
