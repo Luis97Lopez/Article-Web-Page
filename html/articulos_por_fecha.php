@@ -34,8 +34,9 @@
             ?>         
                         <div class="articulo_busqueda">
                             <?php
+                                $imagen = GetImagenArt($registro['idArticulo']);
                                 echo "<a href='articulo.php?idA=".$registro['idArticulo']."' class='busqueda_imagen'>
-                                     <img src='../media/prueba1.jpg'>";
+                                    <img src='../php/imagen.php?idI=".$imagen['idImagen']."'>";
                             ?>
                             </a>
                             <div class="busqueda_info">

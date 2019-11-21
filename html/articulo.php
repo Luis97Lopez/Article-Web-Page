@@ -8,11 +8,12 @@
     else
     {
         $articulo = GetArticulo($_GET['idA']);
+        $usuario = GetUsuario($_SESSION['idUsuario']);
         if(empty($articulo))
         {
             IrAPortada();
         }
-        else if ($articulo['aprobado'] == 0)
+        else if ($articulo['aprobado'] == 0 && $usuario['tipo'] != 0)
         {
             IrAArticulosPerfil($articulo['idUsuario']);
         }
@@ -43,6 +44,18 @@
                 else if(document.getElementById("txtComentario").value == "")
                 {
                     alert("Agrega texto al comentario");
+                    return false;
+                }
+                else if(
+                    <?php
+                        if($articulo['aprobado'] == 0)
+                            echo "true";
+                        else
+                            echo "false";
+                    ?>
+                )
+                {
+                    alert("El artículo no ha sido aprobado");
                     return false;
                 }
                 return true;
