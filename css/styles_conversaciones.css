@@ -1,0 +1,84 @@
+/*
+    ------------------------------------------------------------
+    --------------------------GENERAL---------------------------
+    ------------------------------------------------------------
+*/
+.cuerpo{
+    margin:0;
+    padding:0;
+    background-color:white;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,
+    "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    padding-bottom: 50px;
+
+}
+.layout{
+    width:65%;
+    margin:0 auto;
+}
+/*
+    ------------------------------------------------------------
+    --------------------------CABECERA--------------------------
+    ------------------------------------------------------------
+*/
+.cabecera{
+    padding-top:10px;
+    background-color: rgb(173, 173, 173);
+    width:100%;
+    margin-bottom:10px;
+    text-align:center;
+}
+.logo{
+    width:40%;
+    height:31%;
+}
+.texto_conversacion{
+    color:rgb(77, 77, 77);
+}
+
+/*
+    ------------------------------------------------------------
+    --------------------------BUSQUEDA--------------------------
+    ------------------------------------------------------------
+*/
+.chat{
+    width:100%;
+    height:15% ;
+    padding:2%;
+    margin-top:35px;
+    border-radius: 10px;
+    border:1px rgb(129, 129, 129) solid !important;
+    transition-duration: 0.5s;
+    color:rgb(105, 105, 105)!important;
+    text-decoration: none !important;
+}
+.chat:hover{
+    filter:brightness(50%);
+    background-color:rgb(233, 233, 233);
+}
+.icono{
+    margin-right:2%;
+    height:100% !important;
+    width:10% !important;
+    
+    float:left;
+    transition-duration: 0.3s;
+}
+.icono img{
+    width:100%;
+    height:100%;
+}
+
+.usuario{
+    font-size:40px;
+    width:50%;
+    height:100%;
+    float:left;
+    text-align: center;
+}
+.ult_mensaje{
+    font-size:15px;
+    width:30%;
+    height:100%;
+    float:left;
+}

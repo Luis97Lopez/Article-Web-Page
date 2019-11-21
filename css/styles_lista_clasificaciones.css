@@ -1,0 +1,124 @@
+/*
+    ------------------------------------------------------------
+    --------------------------GENERAL---------------------------
+    ------------------------------------------------------------
+*/
+.cuerpo{
+    margin:0;
+    padding:0;
+    background-color:white;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,
+    "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    padding-bottom: 50px;
+
+}
+.layout{
+    width:50%;
+    margin:0 auto;
+}
+/*
+    ------------------------------------------------------------
+    --------------------------CABECERA--------------------------
+    ------------------------------------------------------------
+*/
+.cabecera{
+    padding-top:10px;
+    background-color: rgb(173, 173, 173);
+    width:100%;
+    margin-bottom:10px;
+    text-align:center;
+}
+.logo{
+    width:40%;
+    height:31%;
+}
+.usuario{
+    display:inline;
+    text-decoration: none !important;
+    font-size:20px;
+    color:rgb(136, 136, 136);
+    transition-duration: 0.5s;
+}
+.usuario:hover{
+    color:rgb(63, 63, 63);
+}
+/*
+    ------------------------------------------------------------
+    --------------------------BUSQUEDA--------------------------
+    ------------------------------------------------------------
+*/
+.articulo_busqueda{
+    width:100%;
+    height:17%;
+    padding:2%;
+    margin-top:35px;
+    border-radius:10px;
+    border:2px solid rgb(133, 133, 133);
+}
+.busqueda_imagen{
+    margin-right:2%;
+    width:30%;
+    height:100%;
+    float:left;
+    transition-duration: 0.3s;
+}
+.busqueda_imagen img{
+    width:100%;
+    height:100%;
+}
+.busqueda_imagen:hover {
+    filter:brightness(50%);
+}
+.busqueda_info{
+    width:68%;
+    height:100%;
+    float:left;
+}
+.info_apartado{
+    width:100%;
+    float:left;
+    margin-top:2%;
+}
+.clasificacion{
+    background-color:whitesmoke;
+    color:black;
+    padding:2px 10px;
+    font-size:10px;
+    text-decoration: none !important;
+    transition-duration: 0.3s;
+}
+.titulo{
+    text-transform: uppercase;
+    font-size:20px;
+    font-weight: bold;
+    color:rgb(173, 173, 173);
+    text-decoration: none !important;
+    transition-duration: 0.3s;
+}
+.titulo:hover{
+    color:rgb(88, 88, 88);
+}
+.clasificacion:hover{
+    color:rgb(88, 88, 88);
+}
+.autor:hover{
+    color:rgb(63, 63, 63);
+}
+.autor{
+    color:rgb(133, 133, 133);
+    font-size:15px;
+    text-decoration: none !important;
+    transition-duration: 0.3s;
+}
+.fecha{
+    font-size:10px;
+}
+.boton{
+    font-size:12px;
+    text-decoration:none !important;
+    margin-right:20px;
+    transition-duration: 0.5s;
+}
+.boton:hover{
+    color:rgb(63, 63, 63);
+}
