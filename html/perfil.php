@@ -81,7 +81,7 @@
                                 Ver artículos
                             </button>
                             </a>";
-                            echo "<a href='conversaciones.php?idU=".$usuario['idUsuario']."'>
+                            echo "<a href='../php/agrega_conversacion.php?idUd=".$usuario['idUsuario']."&idUr=".$_SESSION['idUsuario']."'>
                                 <button type='button' class='btn btn-primary' style='margin-left:15px;'>
                                     Mandar Mensaje
                                 </button>

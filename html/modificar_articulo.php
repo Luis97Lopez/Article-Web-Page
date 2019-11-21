@@ -66,7 +66,7 @@
                     }
                     return true;
                 }
-            </script>    
+            </script>
     </head>
     <body>
         <div class="registro">

@@ -30,6 +30,11 @@
         header("Location:http://localhost/Proyecto/html/perfil.php?idU=".$perfil."");
     }
 
+    function IrAConversacion($chat)
+    {
+        header("Location:http://localhost/Proyecto/html/chat.php?idC=".$chat."");
+    }
+
     function IrAArticulosPerfil($perfil)
     {
         header("Location:http://localhost/Proyecto/html/articulos_por_autor.php?idU=".$perfil."");
@@ -161,7 +166,7 @@
     function GetArticulos()
     {
         $conn = ConectarBD();
-        $consulta = "select * from articulos where aprobado=1";
+        $consulta = "select * from articulos where aprobado=1 order by fecha desc";
         return mysqli_query($conn, $consulta);
        
     }

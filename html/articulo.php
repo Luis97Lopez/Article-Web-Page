@@ -62,7 +62,6 @@
                 
             }
         </script>
-    
     </head>
     <body class="cuerpo">
             <div class="cabecera bg-light">

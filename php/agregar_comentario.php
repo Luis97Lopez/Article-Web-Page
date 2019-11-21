@@ -21,14 +21,11 @@
                 IrAArticulo($_GET['idA']);
             }
             else
-                echo "error1";
-                #IrAPortada();
+                IrAPortada();
         }
         else
-            echo "error2";
-            #IrAPortada();
+            IrAPortada();
     }
     else
-        echo "error3";
-        # IrAPortada();
+        IrAPortada();
 ?>
