@@ -116,6 +116,20 @@
             return array();
     }
 
+    function GetConversaciones($pk_u)
+    {
+        $conn = ConectarBD();
+        $consulta = "select idConversacion, idUsuario1, idUsuario2, fecha from conversaciones
+                    where idUsuario1=$pk_u or idUsuario2=$pk_u order by fecha desc";
+        $resultado = mysqli_query($conn, $consulta);
+        if(mysqli_num_rows($resultado)>0)
+        {
+            return $resultado;
+        }
+        else
+            return array();
+    }
+
     function GetClasificacion($pk)
     {
         $conn = ConectarBD();

@@ -1,3 +1,20 @@
+<?php
+    session_start();
+    include("../php/funciones.php");
+    if(!isset($_SESSION['idUsuario']) && !isset($_GET['idU']))
+    {
+        IrAPortada();
+    }
+    else if($_GET['idU']!="")
+        {
+            $usuario = GetUsuario($_GET['idU']);
+            if($_SESSION['idUsuario'] != $usuario['idUsuario'])
+            {
+                IrAPortada();
+            }
+        }
+?>
+
 <html>
     <head>
         <meta charset="UTF-8">
@@ -17,28 +34,28 @@
                 </button>
             </a>
             <hr class="my-4" style="margin-top:10px !important;">
-            <div id="chats">
-                <a href="chat.php"> <div class="chat">
-                    <div class="icono"> <img src="media/perfil1.jpg"> </div>
-                    <div class="usuario"> Usuario </div>
-                    <div class="ult_mensaje"> Último mensaje: <br> 19:27 pm - 05 de septiembre de 2019 </div>
-                </div> </a>
-                <a href="chat.php"> <div class="chat">
-                    <div class="icono"> <img src="media/perfil1.jpg"> </div>
-                    <div class="usuario"> Usuario </div>
-                    <div class="ult_mensaje"> Último mensaje: <br> 19:27 pm - 05 de septiembre de 2019 </div>
-                </div> </a>
-                <a href="chat.php"> <div class="chat">
-                    <div class="icono"> <img src="media/perfil1.jpg"> </div>
-                    <div class="usuario"> Usuario </div>
-                    <div class="ult_mensaje"> Último mensaje: <br> 19:27 pm - 05 de septiembre de 2019 </div>
-                </div> </a>
-                <a href="chat.php"> <div class="chat">
-                    <div class="icono"> <img src="media/perfil1.jpg"> </div>
-                    <div class="usuario"> Usuario </div>
-                    <div class="ult_mensaje"> Último mensaje: <br> 19:27 pm - 05 de septiembre de 2019 </div>
-                </div> </a>
-            </div>
+            <?php
+                $conversaciones = GetConversaciones($_GET['idU']);
+                if(empty($conversaciones))
+                {
+                        echo "<h1> No tienes conversaciones </h1>";
+                }
+                else
+                {
+                    while($registro = mysqli_fetch_array($conversaciones))
+                    {
+                        echo "
+                        <div id='chats'>
+                            <a href='chat.php'> <div class='chat'>
+                                <div class='icono'> <img src='media/perfil1.jpg'> </div>
+                                <div class='usuario'> Usuario </div>
+                                <div class='ult_mensaje'> Último mensaje: <br> 19:27 pm - 05 de septiembre de 2019 </div>
+                            </div> </a>
+                        </div>
+                        ";
+                    }
+                }
+            ?>
         
         </div>
 
