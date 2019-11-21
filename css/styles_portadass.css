@@ -78,10 +78,11 @@
 .portada_cuadros1{
     padding-top:30px;
     width:100%;
-    height:100%;
+    height: 70%;
 }
 .conjunto_cuadros1{
     width:100%;
+    height:100%;
 }
 .cuadros1{
     text-decoration: none !important;

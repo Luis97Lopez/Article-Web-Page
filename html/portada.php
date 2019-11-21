@@ -241,13 +241,15 @@
                                             $cadena = "";
                                         if(!empty($articulos) && $articulo = mysqli_fetch_array($articulos))
                                         {
-                                            
-                                            echo " <div class='col-md-4 ". $cadena . "'> <a href=# class='cuadros2'>
-                                                        <img src='../media/prueba4.jpg'>
-                                                        <div class='cuadros2_parrafo'> 
-                                                            <span class='cuadros1_genero'> Género </span> <br>
-                                                            <h1 class='cuadros1_titulo'> Título </h1>
-                                                            <span class='cuadros1_fecha'> Fecha </span>
+                                            $imagen = GetImagenArt($articulo['idArticulo']);
+                                            $clasificacion = GetClasificacion($articulo['idClasificacion']);
+                                            echo " <div class='col-md-4 ". $cadena . "'> 
+                                                    <a href=articulo.php?idA=".$articulo['idArticulo']." class='cuadros2'>
+                                                        <img src='../php/imagen.php?idI=".$imagen['idImagen']."'>
+                                                        <div class='cuadros2_parrafo'>
+                                                            <span class='cuadros1_genero'> ".$clasificacion['nombre']."</span> <br>
+                                                            <h1 class='cuadros1_titulo'> ".$articulo['titulo']." </h1>
+                                                            <span class='cuadros1_fecha'> ".$articulo['fecha']." </span>
                                                         </div>
                                                     </a>
                                                 </div>
@@ -256,7 +258,7 @@
                                         else{
                                             echo "
                                                 <div class='col-md-4 ".$cadena. "'>
-                                                    <a href=# class='cuadros2'>
+                                                    <a class='cuadros2'>
                                                         <img src='../media/logo.png'>
                                                         <div class='cuadros2_parrafo'>
                                                         </div>
@@ -288,7 +290,9 @@
                 <!--/.Layout-->
             </div>
             <!--/.Carousel Wrapper-->
-        </div>        
+        </div>
+        
+                           
         
         <a href="articulos_por_fecha.php" style="text-decoration: none;"> <h1 class="ver"> Ver todos los artículos </h1> </a>
 

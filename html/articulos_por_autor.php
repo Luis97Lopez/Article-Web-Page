@@ -27,10 +27,8 @@
         <div class="layout">
             <?php
                 $usuario = GetUsuario($_GET['idU']);
-                if($isset($_SESSION['idUsuario'] && $_SESSION['idUsuario'] == $_GET['idU'])
+                if(!empty($_SESSION) && $_SESSION['idUsuario'] == $_GET['idU'])
                 {
-                    Notice: Undefined index: idUsuario in /opt/lampp/htdocs/Proyecto/html/articulos_por_autor.php on line 30
-                    Resultados de artículos de: admin
                     echo "<span class='texto_busqueda'>Mis artículos - 
                         <a href='perfil.php?idU=".$_GET['idU']."' class='usuario'> ".$usuario['usuario']." </a>
                     </span>";
