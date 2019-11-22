@@ -1,8 +1,6 @@
 <?php
     include("funciones.php");
     session_start();
-    echo $_GET['idA'];
-    echo $_GET['idU'];
     if(isset($_GET['idA']) && isset($_GET['idU']) && isset($_POST['txtComentario']))
     {
         if($_GET['idA'] != "" && $_GET['idU'] != "" )

@@ -1,0 +1,88 @@
+body{
+    width:100%;
+    margin:0 auto;
+    padding:0;
+    background-color: rgb(173, 173, 173);
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,
+    "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+.ventana{
+    background-color:whitesmoke;
+    width:60%;
+    margin: 0 auto;
+    border:6px rgb(212, 210, 210) solid;
+    text-align:center;
+    margin-top:30px;
+    margin-bottom:15px;
+    padding-bottom:10px;
+    
+}
+.logo{
+    width: 500px;
+    height: 200px;
+    margin-bottom:10px;
+}
+.mensajes{
+    width:70%;
+    height:45%;
+    margin:0 auto;
+    border:3px solid rgb(185, 185, 185);
+    border-radius:10px;
+    margin-bottom:30px;
+    overflow-y: scroll;
+    background-color:white;
+}
+.mensaje{
+    width:70%;
+    margin: 30px auto;
+    padding-top: 7px;
+    border-radius:10px;
+    background-color:rgb(241, 241, 241);
+    padding:12px;
+}
+.izquierda{
+    float:left;
+    margin-left:30px;
+    text-align :left;
+   background-color:rgb(241, 241, 241);
+}
+.derecha{
+    float:right;
+    margin-right:30px;
+    text-align: right;
+    background-color:rgb(209, 209, 209);
+}
+.nuevo{
+    margin:0 auto;
+    width:70%;
+}
+.nombre_mensaje{
+    font-size:20px;
+    margin:0;
+    padding:0;
+    font-weight: bolder;
+}
+.texto_mensaje{
+    width:100%;
+}
+.encabezado{
+    width:max-content;
+    height: max-content;
+    margin:0 auto;
+    margin-bottom: 5%;
+}
+.usuario_icono{
+    width:80px;
+    height:80px;
+    float:left;
+    margin:15px;
+}
+.usuario_icono img{
+    width:80px;
+    height:80px;
+}
+.usuario_nombre{
+    padding-top:35px;
+    float: left;
+    color:rgb(97, 97, 97);
+}

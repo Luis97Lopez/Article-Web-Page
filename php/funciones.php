@@ -30,9 +30,9 @@
         header("Location:http://localhost/Proyecto/html/perfil.php?idU=".$perfil."");
     }
 
-    function IrAConversacion($chat)
+    function IrAConversacion($chat, $idUr, $idUd)
     {
-        header("Location:http://localhost/Proyecto/html/chat.php?idC=".$chat."");
+        header("Location:http://localhost/Proyecto/html/chat.php?idC=".$chat."&idUr=".$idUr."&idUd=".$idUd."");
     }
 
     function IrAArticulosPerfil($perfil)
@@ -169,5 +169,12 @@
         $consulta = "select * from articulos where aprobado=1 order by fecha desc";
         return mysqli_query($conn, $consulta);
        
+    }
+
+    function GetMensajes($pk)
+    {
+        $conn = ConectarBD();
+        $consulta = "select * from mensajes where idConversacion=".$pk." order by fecha asc";
+        return mysqli_query($conn, $consulta);
     }
 ?>
