@@ -10,6 +10,11 @@
         header("Location:http://localhost/Proyecto/html/portada.php");
     }
 
+    function IrAUsuarios()
+    {
+        header("Location:http://localhost/Proyecto/html/usuarios.php");
+    }
+
     function IrAClasificaciones()
     {
         header("Location:http://localhost/Proyecto/html/clasificaciones.php");
@@ -168,12 +173,6 @@
         $conn = ConectarBD();
         $consulta = "select * from articulos where aprobado=1 order by fecha desc";
         return mysqli_query($conn, $consulta);
-       
-    }
-
-    function GetMensajes($pk)
-    {
-        $conn = ConectarBD();
         $consulta = "select * from mensajes where idConversacion=".$pk." order by fecha asc";
         return mysqli_query($conn, $consulta);
     }

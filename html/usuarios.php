@@ -39,8 +39,10 @@
                 $resultado = mysqli_query($conn, $qry);
                 if(mysqli_num_rows($resultado)>0)
                 {
-                    while($registro = mysqli_fetch_array($resultado))
+                    while($registro = mysqli_fetch_array($resultado) )
                     {
+                        if($registro['idUsuario'] != $_SESSION['idUsuario'])
+                        {
                         echo "  <div id='chats'>
                         <div class='chat'>
                             <div class='icono'>";
@@ -54,13 +56,14 @@
                             <div class='botones'>
                             ";
                             if($registro['tipo'] == 0)
-                                echo "<a href='../php/hacer_admin.php?idU=".$registro['idUsuario']."' class='boton'> Quitar Admin </a>";
+                                echo "<a href='../php/quitar_admin.php?idU=".$registro['idUsuario']."' class='boton'> Quitar Admin </a>";
                             else
-                                echo "<a href='../php/quitar_admin.php?idU=".$registro['idUsuario']."' class='boton'> Hacer Admin </a>";
-                            echo"<a href='../php/eliminar_usuario.php?idU=".$registro['idUsuario']."' class='boton'> Eliminar </a> 
+                                echo "<a href='../php/hacer_admin.php?idU=".$registro['idUsuario']."' class='boton'> Hacer Admin </a>";
+                            echo"
                             </div>
                         </div>
                     </div>";
+                        }
                     }
                 }
             ?>

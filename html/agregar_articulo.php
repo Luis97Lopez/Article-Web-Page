@@ -52,7 +52,10 @@
             <link rel="stylesheet" href="../css/styles_agregar_articulo.css">
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+            <script src="//cdn.ckeditor.com/4.13.0/full/ckeditor.js"></script>
             <script>
+                
+
                 function VerificaFRM()
                 {
                     if(document.getElementById("txtTitulo").value == "")
@@ -84,7 +87,10 @@
                         }
                     }
                     return true;
+                   
                 }
+
+              
             </script>    
     </head>
     <body>
@@ -106,7 +112,8 @@
                     <div class="form-row">
                         <div class="form-group col-md-10">
                             <label for="texto">Texto</label>
-                            <textarea class="form-control" id="texto" name="texto" rows="10"></textarea>
+                            <textarea id="texto" name="texto" rows="10"></textarea>
+                            <script> CKEDITOR.replace('texto'); </script>
                         </div>
                     </div>
                     <div class="form-row">
@@ -143,7 +150,6 @@
                     <button type="button" class="btn btn-primary" style="margin-left:15px;">Regresar</button>
                 </a>
             </form>
-            
-        </div>
+                   </div>
     </body>
 </html>

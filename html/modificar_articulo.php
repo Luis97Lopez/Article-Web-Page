@@ -38,6 +38,7 @@
             <link rel="stylesheet" href="../css/styles_agregar_articulo.css">
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+            <script src="//cdn.ckeditor.com/4.13.0/full/ckeditor.js"></script>
             <script>
                 function VerificaFRM()
                 {
@@ -93,6 +94,7 @@
                         <div class="form-group col-md-10">
                             <label for="texto">Texto</label>
                             <textarea class="form-control" id="texto" name="texto" rows="10"><?php echo $articulo['texto']; ?></textarea>
+                            <script> CKEDITOR.replace('texto'); </script>
                         </div>
                     </div>
                     <div class="form-row">
