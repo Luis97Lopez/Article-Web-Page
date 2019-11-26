@@ -29,7 +29,7 @@
 
             $idC = mysqli_insert_id($conn);
 
-            IrAConversacion($idC);
+            IrAConversacion($idC, $idUr, $idUd);
         }
     }
 ?>

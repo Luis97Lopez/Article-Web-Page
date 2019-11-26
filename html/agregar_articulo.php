@@ -128,7 +128,7 @@
                     <div class="form-row">
                         <div class="form-group col-md-10">
                             <label for="fecha" class="my-1 mr-2">Fecha de Publicación</label>
-                            <input class="form-control" type="date" id="fecha" name="fecha">
+                            <input class="form-control" type="date" id="fecha" name="fecha"<?php echo " min=".date('Y-m-d').">"?>
                         </div>
                     </div>
                     <div class="form-row" style="padding-left: 130px;">

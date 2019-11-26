@@ -8,7 +8,10 @@
     else
     {
         $articulo = GetArticulo($_GET['idA']);
-        $usuario = GetUsuario($_SESSION['idUsuario']);
+        if(isset($_SESSION['idUsuario']))
+        {
+            $usuario = GetUsuario($_SESSION['idUsuario']);
+        }
         if(empty($articulo))
         {
             IrAPortada();
@@ -108,10 +111,17 @@
                                 <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" 
                                 role="tab" aria-controls="home" aria-selected="true">Comentarios</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" 
-                                role="tab" aria-controls="profile" aria-selected="false">Añadir Comentario</a>
-                            </li>
+                            <?php
+                                if(isset($_SESSION['idUsuario']))
+                                {
+                            ?>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" 
+                                    role="tab" aria-controls="profile" aria-selected="false">Añadir Comentario</a>
+                                </li>
+                            <?php
+                                }
+                            ?>
                         </ul>
                         <div class="tab-content" id="conjunto_comentarios">
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -152,7 +162,10 @@
                             }
                             echo "
                             </div>";
+                            if(isset($_SESSION['idUsuario']))
+                            {
                         ?>
+
                             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                 <label for="txtComentario" style="margin-top:15px;">Comentario:</label>
                                 <?php
@@ -162,6 +175,9 @@
                                     <button type="submit" class="btn btn-primary">Enviar</button>
                                 </form>
                             </div>
+                        <?php
+                            }
+                        ?>
                         </div>
                     </div>
                 </div>

@@ -144,10 +144,13 @@
                                         if($_SESSION['tipo'] == 0)
                                         {
                                             echo "<div class='dropdown-divider'></div>";
+                                            echo "<a class='dropdown-item' href='usuarios.php'>
+                                            Ver Usuarios</a>";
                                             echo "<a class='dropdown-item' href='articulos_sin_aceptar.php'>
                                             Ver Artículos Pendientes</a>";
                                             echo "<a class='dropdown-item' href='clasificaciones.php'>
                                             Ver Clasificaciones</a>";
+
                                         }
                                         ?>
                                     </div>

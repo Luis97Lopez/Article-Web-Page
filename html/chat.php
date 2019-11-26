@@ -16,7 +16,6 @@
         $conversacion = GetArticulo($_GET['idC']);
         $remitente = GetUsuario($_GET['idUr']);
         $destinatario = GetUsuario($_GET['idUd']);
-        
     }
 ?>
 

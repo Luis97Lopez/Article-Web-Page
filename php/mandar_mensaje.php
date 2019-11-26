@@ -9,7 +9,7 @@
             {
                 $date = date("Y-m-d H:i:s");
                 $conn = ConectarBD();
-                $qry = "insert into mensajes (mensaje, fecha, idConversacion, idUsuarioDestinatario) 
+                echo $qry = "insert into mensajes (mensaje, fecha, idConversacion, idUsuarioDestinatario) 
                 values ('".$_POST['txtMensaje']."',
                 '".$date."',
                 '".$_GET['idC']."',
